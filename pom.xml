@@ -3,6 +3,13 @@
 
   <modelVersion>4.0.0</modelVersion>
 
+  <distributionManagement>
+    <snapshotRepository>
+        <id>ppbuilds</id>
+        <url>http://ppbuilds.servebeer.com:8081/repository/maven-snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <parent>
     <groupId>org.sonatype.oss</groupId>
     <artifactId>oss-parent</artifactId>
