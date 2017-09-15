@@ -17,7 +17,7 @@
   </parent>
 
   <groupId>com.mobidevelop.robovm</groupId>
-  <version>2.3.3-SNAPSHOT</version>
+  <version>3.0.0</version>
   <artifactId>robovm-parent</artifactId>
   <name>RoboVM Parent</name>
   <packaging>pom</packaging>
