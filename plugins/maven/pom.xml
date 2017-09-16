@@ -4,11 +4,13 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>7</version>
-  </parent>
+  <distributionManagement>
+    <repository>
+      <id>ppbuilds</id>
+      <name>WRKSHP Internal</name>
+      <url>http://ppbuilds.servebeer.com:8081/repository/internal/</url>
+    </repository>
+  </distributionManagement>
 
   <properties>
     <robovm.version>${project.version}</robovm.version>
@@ -16,7 +18,7 @@
 
   <groupId>com.mobidevelop.robovm</groupId>
   <artifactId>robovm-maven-parent</artifactId>
-  <version>2.3.3-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>RoboVM Maven</name>
   <packaging>pom</packaging>
 

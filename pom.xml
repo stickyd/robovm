@@ -4,37 +4,32 @@
   <modelVersion>4.0.0</modelVersion>
 
   <distributionManagement>
-    <snapshotRepository>
-        <id>ppbuilds</id>
-        <url>http://ppbuilds.servebeer.com:8081/repository/maven-snapshots</url>
-    </snapshotRepository>
+    <repository>
+      <id>ppbuilds</id>
+      <name>WRKSHP Internal</name>
+      <url>http://ppbuilds.servebeer.com:8081/repository/internal/</url>
+    </repository>
   </distributionManagement>
 
-  <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>7</version>
-  </parent>
-
   <groupId>com.mobidevelop.robovm</groupId>
-  <version>3.0.0</version>
+  <version>1.0.0</version>
   <artifactId>robovm-parent</artifactId>
   <name>RoboVM Parent</name>
   <packaging>pom</packaging>
-  <url>http://github.com/MobiVM/robovm</url>
+  <url>https://bitbucket.org/wrkshp/robovm</url>
   <description>
     The RoboVM compiler translates Java bytecode into native ARM or x86 code. Apps run directly on the CPU. No interpreter or virtual machine involved.
   </description>
   <inceptionYear>2012</inceptionYear>
 
   <issueManagement>
-    <url>https://github.com/MobiVM/robovm</url>
+    <url>https://mirpartners.atlassian.net/</url>
   </issueManagement>
 
   <scm>
-    <url>https://github.com/MobiVM/robovm</url>
-    <connection>scm:git:https://github.com/MobiVM/robovm.git</connection>
-    <developerConnection>scm:git:git@github.com:mobidevelop/robovm.git</developerConnection>
+    <url>https://bitbucket.org/wrkshp/robovm</url>
+    <connection>scm:git:https://bitbucket.org/wrkshp/robovm</connection>
+    <developerConnection>scm:git:git@bitbucket.org:wrkshp/robovm.git</developerConnection>
   </scm>
 
   <properties>
