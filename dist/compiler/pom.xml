@@ -5,13 +5,13 @@
   <parent>
     <groupId>com.mobidevelop.robovm</groupId>
     <artifactId>robovm-dist-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.11</version>
   </parent>
 
   <artifactId>robovm-dist-compiler</artifactId>
   <name>RoboVM Distribution (compiler jars)</name>
   <packaging>jar</packaging>
-  <version>1.0.0</version>
+  <version>1.0.11</version>
 
   <properties>
     <robovmdir>${basedir}/../../compiler</robovmdir>

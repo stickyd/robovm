@@ -4,7 +4,7 @@
     <groupId>com.mobidevelop.robovm</groupId>
     <artifactId>org.robovm.idea</artifactId>
     <name>RoboVM plugin for Intellij IDEA</name>
-    <version>1.0.0</version>
+    <version>1.0.11</version>
     <packaging>jar</packaging>
 
     <properties>

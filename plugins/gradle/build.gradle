@@ -10,27 +10,26 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'groovy'
-apply plugin: 'maven'
-apply plugin: 'nexus'
-apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
 apply plugin: 'com.github.johnrengelman.shadow'
-
-group = 'com.mobidevelop.robovm'
-archivesBaseName = 'robovm-gradle-plugin'
-version = '3.0.0'
 
 sourceCompatibility = '1.7'
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 ext {
-    roboVMVersion = '3.0.0'
+    roboVMVersion = System.getProperty('version')
 }
 
 repositories {
     mavenLocal()
     mavenCentral()
-    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { 
+        credentials {
+            username "$ppbuildsUsername"
+            password "$ppbuildsPassword"
+        }
+        url 'http://ppbuilds.servebeer.com:8081/repository/internal/'
+    }
 }
 
 dependencies {
@@ -46,49 +45,8 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
 
-modifyPom {
-    project {
-        name 'RoboVM Gradle Plugin'
-        packaging 'jar'
-        description 'The RoboVM Gradle Plugin provides a way to build RoboVM apps using Gradle.'
-        url 'https://github.com/mobidevelop/robovm/'
-        inceptionYear '2013'
-
-        scm {
-            url 'https://github.com/mobidevelop/robovm.git'
-            connection 'scm:git:git://github.com/mobidevelop/robovm.git'
-            developerConnection 'scm:git:git@github.com:mobidevelop/robovm.git'
-        }
-
-        licenses {
-            license {
-                name 'The Apache Software License, Version 2.0'
-                url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                distribution 'repo'
-            }
-        }
-
-        developers {
-            developer {
-                id 'jtakakura'
-                name 'Junji Takakura'
-            }
-            developer {
-                id 'ntherning'
-                name 'Niklas Therning'
-            }
-        }
-    }
-}
-
 task wrapper(type: Wrapper) {
     gradleVersion = '2.13'
-}
-
-// apply from: 'local.gradle'
-
-jar {
-    enabled = false
 }
 
 shadowJar {
@@ -101,5 +59,24 @@ shadowJar {
     relocate 'org.objectweb.asm', 'com.mobidevelop.robovm.asm'
 }
 
+group = 'com.mobidevelop.robovm'
+version = System.getProperty('version')
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username "$ppbuildsUsername"
+                password "$ppbuildsPassword"
+            }
+            url 'http://ppbuilds.servebeer.com:8081/repository/internal'
+        }
+    }
+}
+
 assemble.dependsOn('shadowJar')
-install.dependsOn('shadowJar')
