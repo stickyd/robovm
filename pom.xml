@@ -7,7 +7,7 @@
     <repository>
       <id>ppbuilds</id>
       <name>WRKSHP Internal</name>
-      <url>http://ppbuilds.servebeer.com:8081/repository/internal/</url>
+      <url>http://teamcity.ppwsinternal.com:8081/repository/internal/</url>
     </repository>
   </distributionManagement>
 

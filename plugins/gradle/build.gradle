@@ -28,7 +28,7 @@ repositories {
             username "$ppbuildsUsername"
             password "$ppbuildsPassword"
         }
-        url 'http://ppbuilds.servebeer.com:8081/repository/internal/'
+        url 'http://teamcity.ppwsinternal.com:8081/repository/internal/'
     }
 }
 
@@ -75,7 +75,7 @@ publishing {
                 username "$ppbuildsUsername"
                 password "$ppbuildsPassword"
             }
-            url 'http://ppbuilds.servebeer.com:8081/repository/internal'
+            url 'http://teamcity.ppwsinternal.com:8081/repository/internal'
         }
     }
 }
