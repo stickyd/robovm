@@ -103,17 +103,29 @@
   </build>
 
   <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>com.mobidevelop.robovm</groupId>
-        <artifactId>robovm-dist-compiler</artifactId>
-        <version>${robovm.version}</version>
-      </dependency>
-    </dependencies>
+      <dependencies>
+          <dependency>
+              <groupId>com.mobidevelop.robovm</groupId>
+              <artifactId>robovm-dist-compiler</artifactId>
+              <version>${robovm.version}</version>
+          </dependency>
+          <dependency>
+              <groupId>com.mobidevelop.robovm</groupId>
+              <artifactId>robovm-debugger</artifactId>
+              <version>${robovm.version}</version>
+              <exclusions>
+                  <exclusion>
+                      <groupId>com.mobidevelop.robovm</groupId>
+                      <artifactId>robovm-compiler</artifactId>
+                  </exclusion>
+              </exclusions>
+          </dependency>
+      </dependencies>
   </dependencyManagement>
 
   <modules>
     <module>plugin</module>
+    <module>surefire</module>
   </modules>
 
 </project>
