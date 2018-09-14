@@ -4,14 +4,14 @@
     <parent>
       <groupId>com.mobidevelop.robovm</groupId>
       <artifactId>robovm-parent</artifactId>
-      <version>1.0.12</version>
+      <version>1.0.13</version>
       <relativePath>../../</relativePath>
     </parent>
 
     <groupId>com.mobidevelop.robovm</groupId>
     <artifactId>robovm-ibxcode</artifactId>
     <name>RoboVM XCode/IB project generator</name>
-    <version>1.0.12</version>
+    <version>1.0.13</version>
     <packaging>jar</packaging>
     <url>http://github.com/MobiVM/robovm</url>
     <description>

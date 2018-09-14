@@ -18,7 +18,7 @@
 
   <groupId>com.mobidevelop.robovm</groupId>
   <artifactId>robovm-maven-parent</artifactId>
-  <version>1.0.12</version>
+  <version>1.0.13</version>
   <name>RoboVM Maven</name>
   <packaging>pom</packaging>
 

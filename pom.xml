@@ -12,7 +12,7 @@
   </distributionManagement>
 
   <groupId>com.mobidevelop.robovm</groupId>
-  <version>1.0.12</version>
+  <version>1.0.13</version>
   <artifactId>robovm-parent</artifactId>
   <name>RoboVM Parent</name>
   <packaging>pom</packaging>
